@@ -40,7 +40,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Setup routing middleware
-app.use(routes);
+app.use(require("./controllers/"));
 
 app.listen(PORT, () => {
   console.log(`App listening on port ${PORT}!`);
